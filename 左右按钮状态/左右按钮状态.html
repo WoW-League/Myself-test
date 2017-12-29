@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>左右按钮状态</title>
+    <style type="text/css">
+        body {
+            padding: 30px;
+        }
+        .box {
+            width: 380px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid brown;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .tab-nav {
+            overflow: hidden;
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            z-index: 10;
+        }
+        .tab-nav li {
+            display: inline-block;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 15px;
+            background: #FFF;
+            list-style: none;
+            line-height: 20px;
+            margin-right: -1px;
+            cursor: pointer;
+            background: #B7B7B7;
+            color: #FFF;
+        }
+        .tab-nav li.active {
+            background: #F60;
+        }
+        .tab-con {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .tab-con div {
+            width: 380px;
+            height: 400px;
+            font-family: cursive;
+            font-size: 100px;
+            text-align: center;
+            line-height: 400px;
+            float: left;
+        }
+        .tab-con div.show {
+            display: block;
+        }
+        .box a{
+            width: 24px;
+            height: 36px;
+            position: absolute;
+            top: 50%;
+            margin-top: -18px;
+            background: rgba(0,0,0,.3);
+            color: #fff;
+            font-size: 20px;
+            line-height:36px;
+            text-align: center;
+            z-index: 999;
+            text-decoration: none;
+        }
+        .box .left{
+            left: 0;
+        }
+        .box .right{
+            right: 0;
+        }
+        .box a:hover{
+            background: rgba(0,0,0,.5);
+        }
+    </style>
+</head>
+<body>
+<h1>1.click</h1>
+<div class="box box1">
+    <ul class="tab-nav">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <a href="javascript:;" class="left"> < </a>
+    <div class="tab-con">
+        <div class="show">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>    
+    <a href="javascript:;" class="right"> > </a>
+</div>
+<h1>2.hover</h1>
+<div class="box box2">
+    <ul class="tab-nav">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <a href="javascript:;" class="left"> < </a>
+    <div class="tab-con">
+        <div class="show">1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>    
+    <a href="javascript:;" class="right"> > </a>
+</div>
+<script type="text/javascript" data-main="js/app.js" src="js/lib/require.js"></script>
+</body>
+</html>
